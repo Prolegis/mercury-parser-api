@@ -24,6 +24,11 @@ To spin up a local dev server that will more closely match the API Gateway endpo
 yarn serve
 ```
 
+Example curl:
+```
+curl -d '{"url":"https://google.com", "html":"<html>This is good</html>"}' -H "Content-Type: application/json" -X POST http://localhost:3000/parse-html
+```
+
 ## Deploy
 
 Assuming you've already [set up your default AWS credentials](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html#cli-quick-configuration) (or have set a different AWS profile via [the profile field](serverless.yml#L21)), simply run:
